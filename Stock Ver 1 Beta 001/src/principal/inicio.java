@@ -1,6 +1,7 @@
 package principal;
 
 import forms.login.Login;
+import menus.MenuPrincipal;
 
 public class inicio {
 
@@ -10,12 +11,8 @@ public class inicio {
 		pri.crearVentanaPrincipal();
 		
 		/* inicio Login*/
-
 		forms.login.Login log = new Login();
 		principal.Principal.escritorio.add(log.crearVentanaLogin());
-		
-		
-		
 		/* fin Login*/ 
 		
 	}

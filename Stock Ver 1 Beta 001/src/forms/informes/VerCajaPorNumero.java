@@ -1,4 +1,4 @@
-package forms.caja;
+package forms.informes;
 
 import javax.swing.JInternalFrame;
 import javax.swing.JPanel;

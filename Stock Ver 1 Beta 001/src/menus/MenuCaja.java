@@ -6,43 +6,53 @@ import java.awt.event.ActionListener;
 import javax.swing.JMenu;
 import javax.swing.JMenuItem;
 
-import forms.caja.VerCajaPorNumero;
+import forms.informes.VerCajaPorNumero;
 
 public class MenuCaja {
 
-	JMenuItem itemCerrarCaja;
+	JMenuItem itemCerrarCaja, itemGastos, itemIngresos, itemCobrarCuenta;
 	
 	public JMenu crearMenuCaja() {
 		JMenu menuCaja = new JMenu("Caja");
 
+		/* inicio menu Irregularidades*/
+		JMenu menuIrregularidades = new JMenu("Cargar Irregularidades");
+		menuCaja.add(menuIrregularidades);
+				
 		/* inicio item Cargar Gastos */
-		JMenuItem itemCargarGastos = new JMenuItem("Cargar Gastos");
-		menuCaja.add(itemCargarGastos);
+		itemGastos = new JMenuItem("Gastos");
+		menuIrregularidades.add(itemGastos);
 		/* fin item Cargar Gastos */
 
 		/* inicio item Otros Ingresos */
-		JMenuItem itemOtrosIngresos = new JMenuItem("Otros Ingresos");
-		menuCaja.add(itemOtrosIngresos);
+		itemIngresos = new JMenuItem("Ingresos");
+		menuIrregularidades.add(itemIngresos);
 		/* fin item Otros Ingresos */
 
+		/* fin menu irregularidades*/
+		
 		/* inicio item Ver Caja */
 		JMenuItem itemVerCaja = new JMenuItem("Ver Caja");
 		menuCaja.add(itemVerCaja);
 		/* fin item Ver Caja */
 
-		/* inicio item Ver Caja por Numero */
-		JMenuItem itemVerCajaPorNumero = new JMenuItem("Ver Caja por Numero");
-		itemVerCajaPorNumero.addActionListener(new ActionListener() {
 
+		// inicio item Cobrar Cuenta 
+		
+		itemCobrarCuenta = new JMenuItem("Cobrar Cuenta Corriente");
+		itemCobrarCuenta.addActionListener(new ActionListener() {
+			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				forms.caja.VerCajaPorNumero vercajanumero = new VerCajaPorNumero();
-				principal.Principal.escritorio.add(vercajanumero.crearVentanaVerCajaPorNumero());
+				// TODO Apéndice de método generado automáticamente
+				
 			}
 		});
-		menuCaja.add(itemVerCajaPorNumero);
-		/* fin item Ver Caja por Numero */
-
+		
+		
+		menuCaja.add(itemCobrarCuenta);
+		// fin item Cobrar Cuenta
+		
 		
 		/* inicio item Cerrar Caja */
 		itemCerrarCaja = new JMenuItem("Cerrar Caja");

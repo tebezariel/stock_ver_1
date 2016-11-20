@@ -11,11 +11,11 @@ public class conectar {
 		try {
 			// cargar nuestro driver
 			Class.forName("com.mysql.jdbc.Driver");
-			con = DriverManager.getConnection("jdbc:mysql://localhost/stock", "root", "1234");
-			System.out.println("conexion establecida");
+			con = DriverManager.getConnection("jdbc:mysql://localhost/stock?verifyServerCertificate=false&useSSL=true", "root", "1234");
+			//System.out.println("conexion establecida");
 			// JOptionPane.showMessageDialog(null, "conexion establecida");
 		} catch (ClassNotFoundException | SQLException e) {
-			System.out.println("err: " + e);
+			//System.out.println("err: " + e);
 		}
 		return con;
 	}

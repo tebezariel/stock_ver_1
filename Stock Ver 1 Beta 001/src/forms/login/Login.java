@@ -88,7 +88,7 @@ public class Login {
 	public void verificarUsuario(JTextField usuario, JPasswordField contraseña) {
 
 		utilidades.herramientas herr = new herramientas();
-		if (herr.login(usuario.getText(), contraseña.getText())) {
+		if (herr.verificarLogin(usuario.getText(), contraseña.getText())) {
 			JOptionPane.showMessageDialog(null, "Bienvenido: " + usuario.getText());
 
 			ventanaLogin.setVisible(false);

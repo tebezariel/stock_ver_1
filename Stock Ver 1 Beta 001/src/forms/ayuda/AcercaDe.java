@@ -10,7 +10,7 @@ public class AcercaDe {
 	 * @wbp.parser.entryPoint
 	 */
 	public JInternalFrame crearVentanaAcercaDe() {
-		JInternalFrame ventanaAcercaDe = new JInternalFrame("Acerca De", true, true, true);
+		JInternalFrame ventanaAcercaDe = new JInternalFrame("Acerca De", false, true, false);
 
 		JPanel panel = new JPanel();
 		ventanaAcercaDe.getContentPane().add(panel);
